@@ -36,7 +36,6 @@ namespace Yuuker
 
             //Run Script
             Script();
-           // FakeBSOD();
         }
         public static bool isAdmin()
         {
