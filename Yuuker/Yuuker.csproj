@@ -95,16 +95,28 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="72847_1.png" />
+    <Resource Include="yuuker.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Red_circle.svg.png" />
+    <Resource Include="redcircle.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Oh_man_gawd_1.png" />
+    <Resource Include="ohmygah.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pagi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Annotation 2024-08-02 180708.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="qr-code.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\brainrot.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\noadmin.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

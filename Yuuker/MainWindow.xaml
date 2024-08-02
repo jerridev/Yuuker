@@ -1,17 +1,43 @@
-﻿<Window x:Class="Yuuker.MainWindow"
+﻿<Window x:Name="thisWindow" x:Class="Yuuker.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Yuuker"
-        mc:Ignorable="d" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowState="Maximized" ResizeMode="NoResize" WindowStyle="None" AllowsTransparency="True" Background="{x:Null}" Foreground="White">
-    <Viewbox>
-        <Grid Width="1920" Height="1080">
-            <Image x:Name="yukko1" Source="/72847_1.png" Stretch="Fill"/>
-            <Image x:Name="circle" Source="/Red_circle.svg.png" Stretch="Fill" Margin="0,0,0,0"/>
-            <Image x:Name="osaka" Source="/Oh_man_gawd_1.png" Stretch="Fill" Margin="1282,312,0,0" HorizontalAlignment="Left" Width="638"/>
-            <Image x:Name="pagi" Source="/pagi.png" Stretch="Fill"/>
+        mc:Ignorable="d" Height="1080" Width="1920" WindowStartupLocation="CenterScreen" WindowState="Maximized" Background="{x:Null}" Foreground="White" Title="Yuuker" WindowStyle="None" ResizeMode="NoResize" AllowsTransparency="True">
 
+    <Grid x:Name="hostgrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="184*"/>
+            <RowDefinition Height="401*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="115*"/>
+            <ColumnDefinition Width="151*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="yukko" Source="/yuuker.png" Stretch="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image x:Name="circle" Source="/redcircle.png" Stretch="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Image x:Name="osaka" Source="/ohmygah.png" Stretch="Fill" Grid.Column="1" Margin="14,14,0,0" Grid.Row="1"/>
+        <Image x:Name="pagi" Source="/pagi.png" Stretch="Fill" Grid.ColumnSpan="2" Grid.RowSpan="2" d:IsHidden="True"/>
+        <Grid x:Name="bsod" Grid.ColumnSpan="2" Grid.RowSpan="2" Background="#FF0077D6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1271*"/>
+                <ColumnDefinition Width="650*"/>
+            </Grid.ColumnDefinitions>
+            <Viewbox>
+                <Grid Height="1080" Width="1264" HorizontalAlignment="Left">
+                    <Image Margin="0,0,521,1" Source="/Annotation 2024-08-02 180708.png" Stretch="Fill" Opacity="0.5" d:IsHidden="True" Visibility="Hidden"/>
+                    <TextBlock x:Name="t1" HorizontalAlignment="Left" Margin="200,389,0,0" TextWrapping="Wrap" Text="Your device ran into a problem and needs to restart. We're just" VerticalAlignment="Top" FontSize="38.3" FontFamily="Segoe UI Semilight"/>
+                    <TextBlock x:Name="twomp" HorizontalAlignment="Left" Margin="182,107,0,0" TextWrapping="Wrap" Text=":(" VerticalAlignment="Top" FontSize="200" FontFamily="Segoe UI Semilight"/>
+                    <TextBlock x:Name="t2" HorizontalAlignment="Left" Margin="198,447,0,0" TextWrapping="Wrap" Text="collecting some error info, and then we'll restart for you." VerticalAlignment="Top" FontSize="38.3" FontFamily="Segoe UI Semilight" Height="62"/>
+                    <TextBlock x:Name="labelComplete" HorizontalAlignment="Left" Margin="200,536,0,0" TextWrapping="Wrap" Text="0% complete" VerticalAlignment="Top" FontSize="38.3" FontFamily="Segoe UI Semilight" Height="62"/>
+                    <TextBlock x:Name="sbt1" HorizontalAlignment="Left" Margin="380,627,0,0" TextWrapping="Wrap" Text="For more information about this issue and possible fixes, visit https://www.windows.com/stopcode" VerticalAlignment="Top" FontSize="19.9" FontFamily="Segoe UI Semilight" Height="43"/>
+                    <TextBlock x:Name="sbt2" HorizontalAlignment="Left" Margin="380,693,0,0" TextWrapping="Wrap" Text="If you call a support person, give them this info:" VerticalAlignment="Top" FontSize="16.7" FontFamily="Segoe UI Semilight" Height="28"/>
+                    <TextBlock x:Name="sbt3" HorizontalAlignment="Left" Margin="380,726,0,0" TextWrapping="Wrap" Text="Stop code: YUUKO_TAKEOVER" VerticalAlignment="Top" FontSize="16.7" FontFamily="Segoe UI Semilight" Height="28"/>
+                    <Image x:Name="sbtqr" HorizontalAlignment="Left" Height="159" Margin="199,634,0,0" VerticalAlignment="Top" Width="159" Source="/qr-code.png"/>
+                </Grid>
+            </Viewbox>
         </Grid>
-    </Viewbox>
+
+    </Grid>
 </Window>
